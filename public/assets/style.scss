@@ -1,0 +1,37 @@
+@import "@/components/style.scss";
+@import "~@feizheng/react-github-corner/dist/style.scss";
+@import "~@feizheng/react-sw-update-tips/dist/style.scss";
+@import "~@feizheng/react-demokit/dist/style.scss";
+
+
+@import "~@feizheng/webkit-sassui-backdrop";
+@import "~@feizheng/webkit-sassui-drawer";
+@import "~@feizheng/react-drawer/dist/style.scss";
+
+.app-container {
+  .button {
+    background: #3cc51f;
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: #fff;
+    padding: 20px;
+    border: none;
+
+    &:active {
+      background: darken(#3cc51f, 10%);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &.react-demokit {
+    > .is-body {
+      padding: 20px;
+      background: #fff;
+    }
+  }
+}
