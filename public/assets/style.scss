@@ -18,6 +18,9 @@
     color: #fff;
     padding: 20px;
     border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &:active {
       background: darken(#3cc51f, 10%);
