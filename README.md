@@ -22,6 +22,7 @@ npm update @feizheng/react-burger-menu
 | className | string | false    | -       | The extended className for component. |
 | value     | bool   | false    | false   | The changed value.                    |
 | onChange  | func   | false    | noop    | The change handler.                   |
+| options   | object | false    | -       | Drawer options.                       |
 
 
 ## usage
@@ -46,8 +47,13 @@ npm update @feizheng/react-burger-menu
         <ReactDemokit
           className="p-3 app-container"
           url="https://github.com/afeiship/react-burger-menu">
-          <ReactBurgerMenu>
-            <p>道可道，非常道；名可名，非常名。 无名，天地之始，有名，万物之母。</p>
+          <ReactBurgerMenu
+            onChange={(e) => {
+              console.log('status changed:', e.target.value);
+            }}>
+            <p>
+              道可道，非常道；名可名，非常名。 无名，天地之始，有名，万物之母。
+            </p>
             <p>故常无欲，以观其妙，常有欲，以观其徼。</p>
             <p>此两者，同出而异名，同谓之玄，玄之又玄，众妙之门。</p>
           </ReactBurgerMenu>

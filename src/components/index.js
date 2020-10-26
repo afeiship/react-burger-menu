@@ -21,7 +21,11 @@ export default class ReactBurgerMenu extends Component {
     /**
      * The change handler.
      */
-    onChange: PropTypes.func
+    onChange: PropTypes.func,
+    /**
+     * Drawer options.
+     */
+    options: PropTypes.object
   };
 
   static defaultProps = {
@@ -44,16 +48,23 @@ export default class ReactBurgerMenu extends Component {
   }
 
   handleClick = () => {
-    this.setState({ value: true });
+    this.change(true);
   };
 
   handleToggle = () => {
-    const { value } = this.state;
-    this.setState({ value: !value });
+    this.change(!this.state.value);
   };
 
+  change(inValue) {
+    const { onChange } = this.props;
+    const target = { value: inValue };
+    this.setState(target, () => {
+      onChange({ target });
+    });
+  }
+
   render() {
-    const { className, children, onChange, ...props } = this.props;
+    const { className, children, onChange, options, ...props } = this.props;
     const { value } = this.state;
     return (
       <div
@@ -68,7 +79,7 @@ export default class ReactBurgerMenu extends Component {
           value={value}
           backdrop={{ onClick: this.handleToggle }}
           children={children}
-          onChange={onChange}
+          {...options}
         />
       </div>
     );
