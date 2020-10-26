@@ -22,6 +22,9 @@ __GENERATE_DOCS__
 ## usage
 1. import css
   ```scss
+  @import "~@feizheng/webkit-sassui-backdrop";
+  @import "~@feizheng/webkit-sassui-drawer";
+  @import "~@feizheng/react-drawer/dist/style.scss";
   @import "~@feizheng/react-burger-menu/dist/style.scss";
 
   // customize your styles:
