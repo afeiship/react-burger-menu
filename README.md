@@ -17,12 +17,13 @@ npm update @feizheng/react-burger-menu
 ```
 
 ## properties
-| Name      | Type   | Required | Default | Description                           |
-| --------- | ------ | -------- | ------- | ------------------------------------- |
-| className | string | false    | -       | The extended className for component. |
-| value     | bool   | false    | false   | The changed value.                    |
-| onChange  | func   | false    | noop    | The change handler.                   |
-| options   | object | false    | -       | Drawer options.                       |
+| Name      | Type    | Required | Default | Description                           |
+| --------- | ------- | -------- | ------- | ------------------------------------- |
+| className | string  | false    | -       | The extended className for component. |
+| value     | bool    | false    | false   | The changed value.                    |
+| onChange  | func    | false    | noop    | The change handler.                   |
+| options   | object  | false    | -       | Drawer options.                       |
+| extra     | element | false    | -       | The extra element.                    |
 
 
 ## usage

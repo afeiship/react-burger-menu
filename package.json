@@ -1,6 +1,6 @@
 {
   "name": "@feizheng/react-burger-menu",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Burger menu for react.",
   "main": "dist/index.js",
   "scripts": {

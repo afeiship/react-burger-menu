@@ -25,7 +25,11 @@ export default class ReactBurgerMenu extends Component {
     /**
      * Drawer options.
      */
-    options: PropTypes.object
+    options: PropTypes.object,
+    /**
+     * The extra element.
+     */
+    extra: PropTypes.element
   };
 
   static defaultProps = {
@@ -64,8 +68,16 @@ export default class ReactBurgerMenu extends Component {
   }
 
   render() {
-    const { className, children, onChange, options, ...props } = this.props;
+    const {
+      className,
+      children,
+      onChange,
+      options,
+      extra,
+      ...props
+    } = this.props;
     const { value } = this.state;
+
     return (
       <div
         data-component={CLASS_NAME}
@@ -81,6 +93,7 @@ export default class ReactBurgerMenu extends Component {
           children={children}
           {...options}
         />
+        {extra}
       </div>
     );
   }
