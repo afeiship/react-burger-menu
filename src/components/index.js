@@ -72,7 +72,7 @@ export default class ReactBurgerMenu extends Component {
         className={classNames(CLASS_NAME, className)}
         {...props}>
         <button className={`${CLASS_NAME}__trigger`} onClick={this.handleClick}>
-          <span>≡</span>
+          <span></span>
         </button>
         <ReactDrawer
           className={`${CLASS_NAME}__popup`}
