@@ -23,6 +23,7 @@ npm update @feizheng/react-burger-menu
 | value     | bool    | false    | false   | The changed value.                    |
 | onChange  | func    | false    | noop    | The change handler.                   |
 | options   | object  | false    | -       | Drawer options.                       |
+| trigger   | func    | false    | noop    | The trigger element.                  |
 | extra     | element | false    | -       | The extra element.                    |
 
 
@@ -52,6 +53,13 @@ npm update @feizheng/react-burger-menu
           className="p-3 app-container"
           url="https://github.com/afeiship/react-burger-menu">
           <ReactBurgerMenu
+            trigger={(props) => {
+              return (
+                <button className="button" {...props}>
+                  CustomizeTrigger
+                </button>
+              );
+            }}
             onChange={(e) => {
               console.log('status changed:', e.target.value);
             }}>

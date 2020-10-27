@@ -11,6 +11,13 @@ class App extends React.Component {
         className="p-3 app-container"
         url="https://github.com/afeiship/react-burger-menu">
         <ReactBurgerMenu
+          trigger={(props) => {
+            return (
+              <button className="button" {...props}>
+                CustomizeTrigger
+              </button>
+            );
+          }}
           onChange={(e) => {
             console.log('status changed:', e.target.value);
           }}>

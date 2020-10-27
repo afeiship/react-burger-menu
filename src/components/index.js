@@ -27,15 +27,33 @@ export default class ReactBurgerMenu extends Component {
      */
     options: PropTypes.object,
     /**
+     * The trigger element.
+     */
+    trigger: PropTypes.func,
+    /**
      * The extra element.
      */
     extra: PropTypes.element
   };
 
   static defaultProps = {
+    trigger: noop,
     value: false,
     onChange: noop
   };
+
+  get Trigger() {
+    const { trigger } = this.props;
+    return trigger === noop
+      ? (props) => {
+          return (
+            <button className={`${CLASS_NAME}__trigger`} {...props}>
+              <span></span>
+            </button>
+          );
+        }
+      : trigger;
+  }
 
   constructor(inProps) {
     super(inProps);
@@ -73,6 +91,7 @@ export default class ReactBurgerMenu extends Component {
       children,
       onChange,
       options,
+      trigger,
       extra,
       ...props
     } = this.props;
@@ -83,9 +102,7 @@ export default class ReactBurgerMenu extends Component {
         data-component={CLASS_NAME}
         className={classNames(CLASS_NAME, className)}
         {...props}>
-        <button className={`${CLASS_NAME}__trigger`} onClick={this.handleClick}>
-          <span></span>
-        </button>
+        <this.Trigger onClick={this.handleClick} />
         <ReactDrawer
           className={`${CLASS_NAME}__popup`}
           value={value}
