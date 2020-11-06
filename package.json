@@ -1,6 +1,6 @@
 {
   "name": "@feizheng/react-burger-menu",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Burger menu for react.",
   "main": "dist/index.js",
   "scripts": {
@@ -21,7 +21,16 @@
     "burger",
     "menu",
     "sidemenu",
-    "drawer"
+    "drawer",
+    "component",
+    "components",
+    "hamburger",
+    "react-component",
+    "sidebar",
+    "ui",
+    "library",
+    "pc",
+    "web"
   ],
   "author": "afei",
   "license": "MIT",
