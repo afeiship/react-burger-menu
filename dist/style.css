@@ -1,0 +1,30 @@
+.react-burger-menu__trigger {
+  box-sizing: content-box;
+  height: 32px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #eee;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column; }
+  .react-burger-menu__trigger:focus, .react-burger-menu__trigger:active {
+    opacity: 0.7;
+    outline: none; }
+  .react-burger-menu__trigger::before, .react-burger-menu__trigger::after,
+  .react-burger-menu__trigger span {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    background: #f60;
+    height: 4px;
+    width: 32px; }
+
+.react-burger-menu__popup {
+  position: relative;
+  width: 300px;
+  background: #fff;
+  padding: 10px;
+  overflow: scroll; }

@@ -1,8 +1,8 @@
-import noop from '@feizheng/noop';
+import noop from '@jswork/noop';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import ReactDrawer from '@feizheng/react-drawer';
+import ReactDrawer from '@jswork/react-drawer';
 
 const CLASS_NAME = 'react-burger-menu';
 
